@@ -6,7 +6,7 @@ export const getAllRestaurants = () => {
     restaurantsApi
       .get()
       .then((res) => {
-        console.log(res.data.data);
+        console.log('api res', res.data.data);
         return dispatch(addRestaurants(res.data.data));
       })
       .catch(console.log());
