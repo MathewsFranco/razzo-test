@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { BiChevronDown } from 'react-icons/bi';
 
 export const NavBar = styled.nav`
-  position: fixed;
+  position: sticky;
   background: #f7f9fc;
   height: 96px;
   width: 100%;
