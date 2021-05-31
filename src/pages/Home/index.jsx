@@ -5,7 +5,7 @@ import RestaurantCard from '../../components/RestaurantCard';
 const Home = () => {
   return (
     <>
-      <NavBar />;
+      <NavBar />
       <RestaurantCard />
     </>
   );
