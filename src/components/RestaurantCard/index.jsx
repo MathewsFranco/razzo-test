@@ -1,27 +1,24 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import { getAllRestaurants } from '../../store/fetchActions';
+import React from 'react';
+import * as Styled from './style';
 
-const RestaurantCard = () => {
-  const restaurants = useSelector((state) => state.restaurants);
-  console.log(`🚀 ~ restaurants`, restaurants);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getAllRestaurants());
-  }, [dispatch]);
+const RestaurantCard = ({
+  imgSource = 'https://via.placeholder.com/68x67',
+  restaurantName = 'Restaurant Name',
+  restaurantType = 'Restaurant Type',
+  restaurantAddress = 'Restaurant Address',
+}) => {
   return (
-    <>
-      {restaurants.map((restaurant, index) => (
-        <div
-          style={{ border: 'solid black 1px', margin: '10px 0 10px 0' }}
-          key={restaurant._id}
-        >
-          {restaurant.name}
-          <br />
-          {restaurant._id}
-        </div>
-      ))}
-    </>
+    <Styled.RestaurantCard>
+      <Styled.RestaurantPhoto src={imgSource} />
+      <Styled.InfoWrapper>
+        <Styled.RestaurantName>{restaurantName}</Styled.RestaurantName>
+        <Styled.RestaurantTypeAndLocation>
+          {restaurantType}
+          <Styled.LocationIcon />
+        </Styled.RestaurantTypeAndLocation>
+        <Styled.RestaurantAddress>{restaurantAddress}</Styled.RestaurantAddress>
+      </Styled.InfoWrapper>
+    </Styled.RestaurantCard>
   );
 };
 
