@@ -9,14 +9,14 @@ const Counter = ({ vertical = false }) => {
         vertical={vertical}
         onClick={() => (count > 1 ? setCount(count - 1) : null)}
       >
-        -
+        <Styled.MinusIcon />
       </Styled.MinusButton>
       <Styled.CounterNumber>{count}</Styled.CounterNumber>
       <Styled.PlusButton
         onClick={() => setCount(count + 1)}
         vertical={vertical}
       >
-        +
+        <Styled.PlusIcon />
       </Styled.PlusButton>
     </Styled.Counter>
   );
