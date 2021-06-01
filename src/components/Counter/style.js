@@ -5,7 +5,7 @@ export const Counter = styled.div`
   display: flex;
   flex-direction: ${(props) => (props.vertical ? 'column' : 'row')};
   min-width: ${(props) => (props.vertical ? '40px' : '104px')};
-  min-height: ${(props) => (props.vertical ? '92px' : '40px')};
+  height: ${(props) => (props.vertical ? '92px' : '40px')};
 `;
 
 export const MinusButton = styled.button`
