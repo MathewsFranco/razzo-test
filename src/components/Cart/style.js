@@ -1,13 +1,22 @@
 import styled, { css } from 'styled-components';
 
+export const CartWrapper = styled.div`
+  background: ${(props) => props.theme.colors.branco};
+  width: 423px;
+`;
+
 export const Cart = styled.div`
   background: ${(props) => props.theme.colors.fundoCards};
-  height: 703px;
+  padding-top: 40.3px;
+  height: 400px;
   width: 423px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 `;
 
 export const CartBtn = styled.button`
   ${({ primary, secondary, theme }) => css`
+    cursor: pointer;
     border: none;
     border-radius: 7px;
     height: 51px;
@@ -24,6 +33,7 @@ export const CartBtn = styled.button`
       ? css`
           background: ${theme.colors.fundoCards};
           color: ${theme.colors.labelCampos};
+          margin: 35px 0 16px 0;
         `
       : ''};
   `}
