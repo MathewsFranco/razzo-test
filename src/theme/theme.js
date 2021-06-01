@@ -14,5 +14,6 @@ export const theme = {
     textoCampos: '#6D5D7A',
     textos: '#979797',
     validar: '#55B84B',
+    simboloBotao: '#ECEBED',
   },
 };

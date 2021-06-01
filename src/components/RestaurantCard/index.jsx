@@ -9,7 +9,7 @@ const RestaurantCard = ({
 }) => {
   return (
     <Styled.RestaurantCard>
-      <Styled.RestaurantPhoto src={imgSource} />
+      <Styled.RestaurantImage src={imgSource} />
       <Styled.InfoWrapper>
         <Styled.RestaurantName>{restaurantName}</Styled.RestaurantName>
         <Styled.RestaurantTypeAndLocation>

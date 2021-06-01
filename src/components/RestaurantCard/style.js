@@ -10,7 +10,7 @@ export const RestaurantCard = styled.div`
   display: flex;
 `;
 
-export const RestaurantPhoto = styled.img`
+export const RestaurantImage = styled.img`
   margin: 16px 12px 16px 16px;
   width: 68px;
   height: 67px;
