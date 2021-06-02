@@ -1,14 +1,16 @@
 import React from 'react';
-import Cart from '../../components/Cart';
-import MenuItem from '../../components/MenuItem';
 import NavBar from '../../components/NavBar';
-import RestaurantCard from '../../components/RestaurantCard';
+import ReferenceBar from '../../components/ReferenceBar';
 import SearchBar from '../../components/SearchBar';
+import MenuItem from '../../components/MenuItem';
+import RestaurantCard from '../../components/RestaurantCard';
+import Cart from '../../components/Cart';
 
 const Home = () => {
   return (
     <>
       <NavBar />
+      <ReferenceBar />
       <SearchBar />
       <MenuItem />
       <RestaurantCard />
