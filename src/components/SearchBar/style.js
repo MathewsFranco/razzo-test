@@ -9,6 +9,7 @@ export const Wrapper = styled.div`
   border-radius: 7px;
   border: 1px solid ${(props) => props.theme.colors.contornoCampo};
 `;
+
 export const SearchBtn = styled.div`
   width: 53.69px;
 `;

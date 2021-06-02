@@ -1,22 +1,8 @@
 import React from 'react';
-import NavBar from '../../components/NavBar';
-import ReferenceBar from '../../components/ReferenceBar';
-import SearchBar from '../../components/SearchBar';
-import MenuItem from '../../components/MenuItem';
-import RestaurantCard from '../../components/RestaurantCard';
-import Cart from '../../components/Cart';
+import Layout from '../../components/Layout';
 
 const Home = () => {
-  return (
-    <>
-      <NavBar />
-      <ReferenceBar />
-      <SearchBar />
-      <MenuItem />
-      <RestaurantCard />
-      <Cart />
-    </>
-  );
+  return <Layout></Layout>;
 };
 
 export default Home;

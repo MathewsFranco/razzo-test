@@ -8,7 +8,7 @@ export const CartWrapper = styled.div`
 export const Cart = styled.div`
   background: ${(props) => props.theme.colors.fundoCards};
   padding-top: 40.3px;
-  height: 400px;
+  max-height: 100%;
   width: 423px;
   overflow-y: scroll;
   overflow-x: hidden;
