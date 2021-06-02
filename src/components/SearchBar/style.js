@@ -15,9 +15,7 @@ export const SearchBtn = styled.div`
 
 export const SearchIcon = styled(BiSearch)`
   color: ${(props) => props.theme.colors.placeholder};
-  font-family: 'Gordita Regular';
-  font-size: 18px;
-  line-height: 18.52px;
+  font-size: 16px;
 `;
 
 export const SearchBar = styled.input`
