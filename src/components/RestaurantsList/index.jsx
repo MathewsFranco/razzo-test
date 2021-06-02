@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { getAllRestaurants } from '../../store/fetchActions';
+import { getAllRestaurants, getRestaurantMenu } from '../../store/fetchActions';
 import RestaurantCard from '../RestaurantCard';
 
 const RestaurantsList = () => {
@@ -10,9 +10,17 @@ const RestaurantsList = () => {
   useEffect(() => {
     dispatch(getAllRestaurants());
   }, [dispatch]);
+
+  const menuItems = useSelector((state) => state.menuItems);
+  console.log(`🚀 ~ menuItems`, menuItems);
+
+  function handleClick(restaurantId = '609ee7c9daf43e472de400e4') {
+    dispatch(getRestaurantMenu(restaurantId));
+  }
+
   return (
     <>
-      {restaurants.map((restaurant, index) => (
+      {restaurants.map((restaurant) => (
         <RestaurantCard
           key={restaurant._id}
           imgSource={restaurant.assets.logo}
@@ -21,6 +29,7 @@ const RestaurantsList = () => {
           restaurantStreet={restaurant.address.street_name}
           restaurantNum={restaurant.address.street_number}
           restaurantNeighborhood={restaurant.address.neighborhood}
+          onClick={() => handleClick()}
         />
       ))}
     </>

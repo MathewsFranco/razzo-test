@@ -8,9 +8,10 @@ const RestaurantCard = ({
   restaurantStreet = 'Restaurant Address',
   restaurantNum = 'Restaurant Address',
   restaurantNeighborhood = 'Restaurant Address',
+  onClick,
 }) => {
   return (
-    <Styled.RestaurantCard>
+    <Styled.RestaurantCard onClick={onClick}>
       <Styled.RestaurantImage src={imgSource} />
       <Styled.InfoWrapper>
         <Styled.RestaurantName>{restaurantName}</Styled.RestaurantName>
