@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { IoLocationOutline } from 'react-icons/io5';
 
 export const RestaurantCard = styled.div`
+  cursor: pointer;
   border: 1px solid ${(props) => props.theme.colors.contornoCampo};
   border-radius: 7px;
   margin: 23px;
@@ -15,6 +16,7 @@ export const RestaurantImage = styled.img`
   width: 68px;
   height: 67px;
   border-radius: 7px;
+  object-fit: cover;
 `;
 
 export const InfoWrapper = styled.div`

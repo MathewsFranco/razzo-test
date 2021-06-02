@@ -5,7 +5,9 @@ const RestaurantCard = ({
   imgSource = 'https://via.placeholder.com/68x67',
   restaurantName = 'Restaurant Name',
   restaurantType = 'Restaurant Type',
-  restaurantAddress = 'Restaurant Address',
+  restaurantStreet = 'Restaurant Address',
+  restaurantNum = 'Restaurant Address',
+  restaurantNeighborhood = 'Restaurant Address',
 }) => {
   return (
     <Styled.RestaurantCard>
@@ -16,7 +18,10 @@ const RestaurantCard = ({
           {restaurantType}
           <Styled.LocationIcon />
         </Styled.RestaurantTypeAndLocation>
-        <Styled.RestaurantAddress>{restaurantAddress}</Styled.RestaurantAddress>
+        <Styled.RestaurantAddress>
+          Rua: {restaurantStreet}, {restaurantNum}
+          <br /> {restaurantNeighborhood}
+        </Styled.RestaurantAddress>
       </Styled.InfoWrapper>
     </Styled.RestaurantCard>
   );

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAllRestaurants } from '../../store/fetchActions';
+import RestaurantCard from '../RestaurantCard';
 
 const RestaurantsList = () => {
   const restaurants = useSelector((state) => state.restaurants);
@@ -12,14 +13,15 @@ const RestaurantsList = () => {
   return (
     <>
       {restaurants.map((restaurant, index) => (
-        <div
-          style={{ border: 'solid black 1px', margin: '10px 0 10px 0' }}
+        <RestaurantCard
           key={restaurant._id}
-        >
-          {restaurant.name}
-          <br />
-          {restaurant._id}
-        </div>
+          imgSource={restaurant.assets.logo}
+          restaurantName={restaurant.name}
+          restaurantType={restaurant.description}
+          restaurantStreet={restaurant.address.street_name}
+          restaurantNum={restaurant.address.street_number}
+          restaurantNeighborhood={restaurant.address.neighborhood}
+        />
       ))}
     </>
   );

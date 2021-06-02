@@ -5,7 +5,7 @@ import SearchBar from '../SearchBar';
 import Cart from '../Cart';
 import * as Styled from './style';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <div>
       <NavBar />
@@ -14,7 +14,7 @@ const Layout = () => {
         <Styled.Wrapper>
           {/* here comes the search bar or the restaurant card extended */}
           <SearchBar />
-          <Styled.Content></Styled.Content>
+          <Styled.Content>{children}</Styled.Content>
         </Styled.Wrapper>
         <Cart />
       </Styled.ContentWrapper>

@@ -10,5 +10,6 @@ export const ContentWrapper = styled.div`
   padding: 0 55px 49px 35px;
 `;
 export const Content = styled.section`
-  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
 `;
