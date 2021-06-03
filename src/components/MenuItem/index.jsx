@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Styled from './style';
 import Counter from '../Counter';
+import formatPrice from '../../services/formatPrice';
 
 const MenuItem = ({
   menuItemImg,
@@ -8,10 +9,6 @@ const MenuItem = ({
   menuItemDescription,
   menuItemPrice,
 }) => {
-  function formatPrice(price) {
-    const formattedPrice = (price / 100).toFixed(2).replace('.', ',');
-    return formattedPrice;
-  }
   return (
     <Styled.MenuItemCard>
       <Styled.MenuItemImg src={menuItemImg} />
