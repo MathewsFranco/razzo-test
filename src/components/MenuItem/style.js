@@ -14,6 +14,7 @@ export const MenuItemImg = styled.img`
   width: 90px;
   border-radius: 7px;
   margin: 16px 0 8px 0;
+  object-fit: cover;
 `;
 
 export const MenuItemName = styled.p`
@@ -32,7 +33,7 @@ export const MenuItemDescription = styled.p`
   margin: 0 0 4px 0;
 `;
 
-export const MenuItemCooktime = styled.p`
+export const MenuItemCookTime = styled.p`
   font-family: 'Gordita Regular';
   font-size: 10px;
   color: ${(props) => props.theme.colors.textos};

@@ -2,16 +2,27 @@ import React from 'react';
 import * as Styled from './style';
 import Counter from '../Counter';
 
-const MenuItem = () => {
+const MenuItem = ({
+  menuItemImg,
+  menuItemName,
+  menuItemDescription,
+  menuItemPrice,
+}) => {
+  function formatPrice(price) {
+    const formattedPrice = (price / 100).toFixed(2).replace('.', ',');
+    return formattedPrice;
+  }
   return (
     <Styled.MenuItemCard>
-      <Styled.MenuItemImg src="https://via.placeholder.com/90" />
-      <Styled.MenuItemName>MenuItemName</Styled.MenuItemName>
+      <Styled.MenuItemImg src={menuItemImg} />
+      <Styled.MenuItemName>{menuItemName}</Styled.MenuItemName>
       <Styled.MenuItemDescription>
-        MenuItemDescription + MenuItemDescription
+        {menuItemDescription}
       </Styled.MenuItemDescription>
-      <Styled.MenuItemCooktime>Tempo de Preparo: 55min</Styled.MenuItemCooktime>
-      <Styled.MenuItemPrice>R$ 69,69</Styled.MenuItemPrice>
+      <Styled.MenuItemCookTime>Tempo de Preparo: 55min</Styled.MenuItemCookTime>
+      <Styled.MenuItemPrice>
+        R${formatPrice(menuItemPrice)}
+      </Styled.MenuItemPrice>
       <Counter />
     </Styled.MenuItemCard>
   );

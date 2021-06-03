@@ -9,7 +9,13 @@ const MenuList = () => {
   return (
     <>
       {menuItems.map((item) => (
-        <MenuItem />
+        <MenuItem
+          key={item._id}
+          menuItemImg={item.imgs[1].url}
+          menuItemName={item.name}
+          menuItemDescription={item.description}
+          menuItemPrice={item.pricing}
+        />
       ))}
     </>
   );

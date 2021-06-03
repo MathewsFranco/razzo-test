@@ -14,7 +14,7 @@ const RestaurantsList = () => {
   const menuItems = useSelector((state) => state.menuItems);
   console.log(`🚀 ~ menuItems`, menuItems);
 
-  function handleClick(restaurantId = '609ee7c9daf43e472de400e4') {
+  function handleClick(restaurantId) {
     dispatch(getRestaurantMenu(restaurantId));
   }
 
@@ -29,7 +29,7 @@ const RestaurantsList = () => {
           restaurantStreet={restaurant.address.street_name}
           restaurantNum={restaurant.address.street_number}
           restaurantNeighborhood={restaurant.address.neighborhood}
-          onClick={() => handleClick()}
+          onClick={() => handleClick(restaurant._id)}
         />
       ))}
     </>
