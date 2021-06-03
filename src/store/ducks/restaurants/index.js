@@ -5,5 +5,5 @@ const INITIAL_STATE = [];
 export const addRestaurants = createAction('ADD_RESTAURANTS');
 
 export default createReducer(INITIAL_STATE, {
-  [addRestaurants]: (_state, action) => [...action.payload],
+  [addRestaurants.type]: (_state, action) => [...action.payload],
 });
