@@ -7,7 +7,7 @@ import * as Styled from './style';
 
 const Layout = ({ children }) => {
   return (
-    <div>
+    <div style={{ minHeight: '100vh', maxHeight: '100vh' }}>
       <NavBar />
       <ReferenceBar />
       <Styled.ContentWrapper>

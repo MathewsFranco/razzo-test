@@ -3,15 +3,18 @@ import styled, { css } from 'styled-components';
 export const CartWrapper = styled.div`
   background: ${(props) => props.theme.colors.branco};
   width: 423px;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Cart = styled.div`
   background: ${(props) => props.theme.colors.fundoCards};
   padding-top: 40.3px;
-  max-height: 100%;
   width: 423px;
+  height: calc(100vh - 175px - 49px);
   overflow-y: scroll;
   overflow-x: hidden;
+  ${(props) => props.theme.scrollBar}
 `;
 
 export const CartBtn = styled.button`
@@ -19,7 +22,7 @@ export const CartBtn = styled.button`
     cursor: pointer;
     border: none;
     border-radius: 7px;
-    height: 51px;
+    min-height: 51px;
     width: 423px;
     font-family: 'Gordita Medium';
     size: 13px;

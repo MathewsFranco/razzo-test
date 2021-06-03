@@ -1,5 +1,10 @@
 import styled from 'styled-components';
 import { FaTrashAlt } from 'react-icons/fa';
+// import Counter from '../Counter'
+
+// export const DisabledCounter = styled(Counter)`
+//   onClick
+// `;
 
 export const CartItemCard = styled.div`
   width: 390px;

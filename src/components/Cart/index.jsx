@@ -4,23 +4,28 @@ import CartItem from '../CartItem';
 import * as Styled from './style';
 
 const Cart = () => {
-  const cartItems = useSelector((state) => state.cartItems);
-  const restaurantName = useSelector((state) => state.restaurants);
+  const cartItems = useSelector((state) => state.cart);
+  console.log(`🚀 ~ cartItems`, cartItems);
+  // const restaurantName = useSelector((state) => state.restaurants);
 
   return (
     <Styled.CartWrapper>
       <Styled.Cart>
-        {cartItems?.map((item) => (
-          <CartItem
-            key={item._id}
-            imgSource={item.imgs[0].url}
-            CartItemName={item.name}
-            CartItemType={item.description}
-            CartItemStreet={item.address.street_name}
-            CartItemNum={item.address.street_number}
-            CartItemNeighborhood={item.address.neighborhood}
-          />
-        ))}
+        {cartItems.length > 0 &&
+          cartItems.map((item, index) => {
+            console.log(item);
+            return (
+              <CartItem
+                key={index}
+                img={item.imgs[0].url}
+                name={item.name}
+                type={item.category}
+                price={item.pricing}
+                quantity={item.quantity}
+                uniqueId={item.uniqueId}
+              />
+            );
+          })}
       </Styled.Cart>
       <Styled.CartBtn secondary>Continuar Comprando</Styled.CartBtn>
       <Styled.CartBtn primary> Confirmar a Compra</Styled.CartBtn>

@@ -15,6 +15,7 @@ const MenuList = () => {
           menuItemName={item.name}
           menuItemDescription={item.description}
           menuItemPrice={item.pricing}
+          menuItem={item}
         />
       ))}
     </>

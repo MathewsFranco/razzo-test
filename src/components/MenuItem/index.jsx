@@ -8,6 +8,7 @@ const MenuItem = ({
   menuItemName,
   menuItemDescription,
   menuItemPrice,
+  menuItem,
 }) => {
   return (
     <Styled.MenuItemCard>
@@ -20,7 +21,7 @@ const MenuItem = ({
       <Styled.MenuItemPrice>
         R${formatPrice(menuItemPrice)}
       </Styled.MenuItemPrice>
-      <Counter />
+      <Counter item={menuItem} />
     </Styled.MenuItemCard>
   );
 };

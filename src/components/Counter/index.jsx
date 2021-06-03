@@ -1,8 +1,18 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { addCartItem } from '../../store/ducks/cart';
 import * as Styled from './style';
 
-const Counter = ({ vertical = false }) => {
-  const [count, setCount] = useState(1);
+const Counter = ({ vertical = false, item, amount = 1, inCart = false }) => {
+  const [count, setCount] = useState(amount);
+  const dispatch = useDispatch();
+
+  function handleDispatchCounter() {
+    dispatch(
+      addCartItem({ ...item, quantity: count, uniqueId: new Date().getTime() }),
+    );
+  }
+
   return (
     <Styled.Counter vertical={vertical}>
       <Styled.MinusButton
@@ -11,7 +21,13 @@ const Counter = ({ vertical = false }) => {
       >
         <Styled.MinusIcon />
       </Styled.MinusButton>
-      <Styled.CounterNumber>{count}</Styled.CounterNumber>
+
+      <Styled.CounterNumber
+        onClick={() => (inCart ? null : handleDispatchCounter())}
+      >
+        {count}
+      </Styled.CounterNumber>
+
       <Styled.PlusButton
         onClick={() => setCount(count + 1)}
         vertical={vertical}
