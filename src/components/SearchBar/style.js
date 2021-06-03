@@ -8,6 +8,8 @@ export const Wrapper = styled.div`
   justify-content: center;
   border-radius: 7px;
   border: 1px solid ${(props) => props.theme.colors.contornoCampo};
+  margin-left: 23px;
+  padding-left: 16px;
 `;
 
 export const SearchBtn = styled.div`
@@ -27,13 +29,8 @@ export const SearchBar = styled.input`
   font-size: 13px;
   color: ${(props) => props.theme.colors.preto};
   line-height: 18.52px;
-  margin: 0;
-  padding-left: 16px;
+
   ::placeholder {
     color: ${(props) => props.theme.colors.placeholder};
-  }
-  &:active {
-    border: none;
-    outline: none;
   }
 `;
