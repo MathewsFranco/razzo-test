@@ -33,11 +33,9 @@ const Counter = ({
       if (count > 1) {
         setCount(count - 1);
         dispatch(subCartItem(cartItemId));
-      } else {
-        if (count > 1) {
-          setCount(count - 1);
-        }
       }
+    } else if (count > 1) {
+      setCount(count - 1);
     }
   }
 

@@ -10,7 +10,6 @@ import restaurantsApi from '../../services/restaurantsApi';
 
 const Layout = ({ children, home = false, menu = false }) => {
   const { restaurantId } = useParams();
-  console.log(`🚀 ~ restaurantId`, restaurantId);
   const [restaurant, setRestaurant] = useState();
 
   useEffect(() => {
