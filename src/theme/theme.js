@@ -10,7 +10,7 @@ const colors = {
   labelCampos: '#73657E',
   preto: '#282828',
   placeholder: '#D0C9D6',
-  textoCampos: '##6D5D7A',
+  textoCampos: '#6D5D7A',
   textos: '#979797',
   validar: '#55B84B',
   simboloBotao: '#ECEBED',
