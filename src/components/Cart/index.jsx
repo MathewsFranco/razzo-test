@@ -6,7 +6,6 @@ import * as Styled from './style';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
-  console.log(`🚀 ~ cartItems`, cartItems);
   const subtotal = cartItems.reduce(
     (acc, cur) => acc + cur.pricing * cur.quantity,
     0,
@@ -26,6 +25,7 @@ const Cart = () => {
                 price={item.pricing}
                 quantity={item.quantity}
                 uniqueId={item.uniqueId}
+                businessId={item.business}
               />
             );
           })}
