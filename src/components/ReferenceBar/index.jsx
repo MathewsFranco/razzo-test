@@ -1,12 +1,17 @@
 import React from 'react';
+import Link from '../Link';
 import * as Styled from './style';
 
 const ReferenceBar = () => {
   return (
     <Styled.Wrapper>
-      <Styled.ArrowLeftIcon></Styled.ArrowLeftIcon>
+      <Link to={'/'}>
+        <Styled.ArrowLeftIcon />
+      </Link>
       <Styled.ReferenceWrapper>
-        <Styled.PageReference>Home</Styled.PageReference>
+        <Link to={'/'}>
+          <Styled.PageReference>Home</Styled.PageReference>
+        </Link>
         <Styled.ArrowRightIcon />
         <Styled.CartReference>Cart</Styled.CartReference>
       </Styled.ReferenceWrapper>
