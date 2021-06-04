@@ -15,7 +15,7 @@ export const Logo = styled.img`
   height: 30px;
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.p`
   cursor: pointer;
   margin-left: 150px;
   box-shadow: inset 0 -3px ${(props) => props.theme.colors.link};
