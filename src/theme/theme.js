@@ -25,6 +25,7 @@ export const theme = {
 
   ::-webkit-scrollbar-track {
     background: ${colors.fundoApp};
+    margin-top: 40px;
   }
 
   ::-webkit-scrollbar-thumb {
