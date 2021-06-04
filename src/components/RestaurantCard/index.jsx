@@ -10,9 +10,10 @@ const RestaurantCard = ({
   restaurantNeighborhood = 'Restaurant Address',
   onClick,
   inMenu = false,
+  restaurantId,
 }) => {
   return (
-    <Styled.CustomLink to="/menu">
+    <Styled.CustomLink to={`/menu/${restaurantId}`}>
       <Styled.RestaurantCard inMenu={inMenu} onClick={onClick}>
         <Styled.RestaurantImage src={imgSource} />
         <Styled.InfoWrapper>
