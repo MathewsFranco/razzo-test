@@ -7,7 +7,9 @@ import * as Styled from './style';
 
 const Layout = ({ children }) => {
   return (
-    <div style={{ minHeight: '100vh', maxHeight: '100vh' }}>
+    <div
+      style={{ minHeight: '100vh', maxHeight: '100vh', overflowX: 'hidden' }}
+    >
       <NavBar />
       <ReferenceBar />
       <Styled.ContentWrapper>

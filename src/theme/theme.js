@@ -22,12 +22,12 @@ export const theme = {
     ::-webkit-scrollbar {
     width: 5px;
   }
-
+  
   ::-webkit-scrollbar-track {
-    background: ${colors.fundoApp};
-    margin-top: 40px;
+    background: inherit;
+    margin-top: 30px;
   }
-
+  
   ::-webkit-scrollbar-thumb {
     background: ${colors.placeholder};
     border-radius: 7px;
