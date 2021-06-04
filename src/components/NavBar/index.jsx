@@ -3,8 +3,10 @@ import * as Styled from './style';
 import logo from '../../img/razzo-logo.png';
 import userAvatar from '../../img/user-avatar.png';
 import { IoBagOutline } from 'react-icons/io5';
+import { useSelector } from 'react-redux';
 
 const NavBar = () => {
+  const amountInCart = useSelector((state) => state.cart).length;
   return (
     <Styled.NavBar>
       <Styled.Wrapper>
@@ -12,7 +14,7 @@ const NavBar = () => {
         <Styled.NavLink>Dashboard</Styled.NavLink>
       </Styled.Wrapper>
       <Styled.Wrapper>
-        <Styled.CartIcon>
+        <Styled.CartIcon notification={amountInCart}>
           <IoBagOutline />
         </Styled.CartIcon>
         <Styled.Avatar src={userAvatar} />

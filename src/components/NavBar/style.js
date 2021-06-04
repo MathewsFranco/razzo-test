@@ -37,6 +37,22 @@ export const CartIcon = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  &::after {
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    margin: 3px 0 0 50px;
+    content: '${(props) => props.notification}';
+    background: ${(props) => props.theme.colors.link};
+    position: absolute;
+    top: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${(props) => props.theme.colors.branco};
+    font-family: 'Gordita Regular';
+    font-size: 10px;
+  }
 `;
 export const Avatar = styled.img`
   margin-right: 11.33px;
