@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from '../Link';
 import * as Styled from './style';
 
 const RestaurantCard = ({
@@ -13,7 +14,7 @@ const RestaurantCard = ({
   restaurantId,
 }) => {
   return (
-    <Styled.CustomLink to={`/menu/${restaurantId}`}>
+    <Link to={`/menu/${restaurantId}`}>
       <Styled.RestaurantCard inMenu={inMenu} onClick={onClick}>
         <Styled.RestaurantImage src={imgSource} />
         <Styled.InfoWrapper>
@@ -28,7 +29,7 @@ const RestaurantCard = ({
           </Styled.RestaurantAddress>
         </Styled.InfoWrapper>
       </Styled.RestaurantCard>
-    </Styled.CustomLink>
+    </Link>
   );
 };
 
