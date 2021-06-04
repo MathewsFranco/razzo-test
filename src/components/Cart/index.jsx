@@ -11,6 +11,7 @@ const Cart = () => {
     (acc, cur) => acc + cur.pricing * cur.quantity,
     0,
   );
+  const deliveryTax = 790;
   return (
     <Styled.CartWrapper>
       <Styled.CartItems>
@@ -36,12 +37,14 @@ const Cart = () => {
         </Styled.PriceSpacer>
         <Styled.PriceSpacer>
           <Styled.Label>Entrega:</Styled.Label>
-          <Styled.Value>R$7,90</Styled.Value>
+          <Styled.Value>R${formatPrice(deliveryTax)}</Styled.Value>
         </Styled.PriceSpacer>
         <Styled.Separator />
         <Styled.PriceSpacer>
           <Styled.TotalLabel>Total:</Styled.TotalLabel>
-          <Styled.TotalValue>R$66,99</Styled.TotalValue>
+          <Styled.TotalValue>
+            R${formatPrice(subtotal + deliveryTax)}
+          </Styled.TotalValue>
         </Styled.PriceSpacer>
       </Styled.PriceInfo>
       <Styled.CartBtn secondary>Continuar Comprando</Styled.CartBtn>
