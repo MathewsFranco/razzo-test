@@ -1,19 +1,21 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+import formatPrice from '../../services/formatPrice';
 import CartItem from '../CartItem';
 import * as Styled from './style';
 
 const Cart = () => {
   const cartItems = useSelector((state) => state.cart);
   console.log(`🚀 ~ cartItems`, cartItems);
-  // const restaurantName = useSelector((state) => state.restaurants);
-
+  const subtotal = cartItems.reduce(
+    (acc, cur) => acc + cur.pricing * cur.quantity,
+    0,
+  );
   return (
     <Styled.CartWrapper>
       <Styled.CartItems>
         {cartItems.length > 0 &&
           cartItems.map((item, index) => {
-            console.log(item);
             return (
               <CartItem
                 key={index}
@@ -29,17 +31,17 @@ const Cart = () => {
       </Styled.CartItems>
       <Styled.PriceInfo>
         <Styled.PriceSpacer>
-          <Styled.Label>Subtotal:</Styled.Label>
-          <Styled.Value>Value</Styled.Value>
+          <Styled.Label>Subtotal: </Styled.Label>
+          <Styled.Value>R${formatPrice(subtotal)}</Styled.Value>
         </Styled.PriceSpacer>
         <Styled.PriceSpacer>
           <Styled.Label>Entrega:</Styled.Label>
-          <Styled.Value>R$: 7,90</Styled.Value>
+          <Styled.Value>R$7,90</Styled.Value>
         </Styled.PriceSpacer>
         <Styled.Separator />
         <Styled.PriceSpacer>
           <Styled.TotalLabel>Total:</Styled.TotalLabel>
-          <Styled.TotalValue>R$ 66,99</Styled.TotalValue>
+          <Styled.TotalValue>R$66,99</Styled.TotalValue>
         </Styled.PriceSpacer>
       </Styled.PriceInfo>
       <Styled.CartBtn secondary>Continuar Comprando</Styled.CartBtn>

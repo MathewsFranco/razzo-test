@@ -4,7 +4,6 @@ import MenuItem from '../MenuItem';
 
 const MenuList = () => {
   const menuItems = useSelector((state) => state.menuItems);
-  console.log(`🚀 ~ menuItems`, menuItems);
 
   return (
     <>

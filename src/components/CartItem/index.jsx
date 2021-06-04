@@ -23,7 +23,7 @@ const CartItem = ({ img, name, type, price, quantity, uniqueId }) => {
           </Styled.CartItemText>
         </Styled.Wrapper>
         <Styled.Wrapper>
-          <Counter vertical inCart amount={quantity} />
+          <Counter vertical inCart amount={quantity} cartItemId={uniqueId} />
           <Styled.DeleteIcon onClick={handleDelete} />
         </Styled.Wrapper>
       </Styled.CartItemInfo>

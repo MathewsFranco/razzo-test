@@ -13,9 +13,9 @@ export const CartItems = styled.div`
   border-radius: 7px 7px 0 0;
   width: 428px; /*original value + the custom scrollbar width */
   height: 100vh;
+  ${(props) => props.theme.scrollBar}
   overflow-y: scroll;
   overflow-x: hidden;
-  ${(props) => props.theme.scrollBar}
 `;
 
 export const CartBtn = styled.button`
@@ -48,7 +48,7 @@ export const PriceInfo = styled.section`
   border-radius: 0 0 7px 7px;
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 428px;
   background: ${(props) => props.theme.colors.fundoCards};
 `;
 
