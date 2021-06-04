@@ -33,4 +33,12 @@ export const SearchBar = styled.input`
   ::placeholder {
     color: ${(props) => props.theme.colors.placeholder};
   }
+
+  :active {
+    border: none;
+  }
+
+  :focus-visible {
+    outline: none;
+  }
 `;
