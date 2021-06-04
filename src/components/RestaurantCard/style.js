@@ -1,12 +1,21 @@
 import styled from 'styled-components';
 import { IoLocationOutline } from 'react-icons/io5';
+import { Link } from 'react-router-dom';
 
+export const CustomLink = styled(Link)`
+  text-decoration: none;
+  color: none;
+  :active,
+  :focus {
+    color: green;
+  }
+`;
 export const RestaurantCard = styled.div`
   cursor: pointer;
   border: 1px solid ${(props) => props.theme.colors.contornoCampo};
   border-radius: 7px;
   margin: 23px;
-  width: 290px;
+  width: ${(props) => (props.inMenu ? `90%` : '290px')};
   height: 99px;
   display: flex;
 `;

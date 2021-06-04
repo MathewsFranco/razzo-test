@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { addMenuItem } from '../../store/ducks/menu';
 import { getAllRestaurants, getRestaurantMenu } from '../../store/fetchActions';
 import RestaurantCard from '../RestaurantCard';
 
@@ -8,6 +9,7 @@ const RestaurantsList = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllRestaurants());
+    dispatch(addMenuItem([]));
   }, [dispatch]);
 
   function handleClick(restaurantId) {

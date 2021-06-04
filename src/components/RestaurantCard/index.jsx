@@ -9,22 +9,25 @@ const RestaurantCard = ({
   restaurantNum = 'Restaurant Address',
   restaurantNeighborhood = 'Restaurant Address',
   onClick,
+  inMenu = false,
 }) => {
   return (
-    <Styled.RestaurantCard onClick={onClick}>
-      <Styled.RestaurantImage src={imgSource} />
-      <Styled.InfoWrapper>
-        <Styled.RestaurantName>{restaurantName}</Styled.RestaurantName>
-        <Styled.RestaurantTypeAndLocation>
-          {restaurantType}
-          <Styled.LocationIcon />
-        </Styled.RestaurantTypeAndLocation>
-        <Styled.RestaurantAddress>
-          Rua: {restaurantStreet}, {restaurantNum}
-          <br /> {restaurantNeighborhood}
-        </Styled.RestaurantAddress>
-      </Styled.InfoWrapper>
-    </Styled.RestaurantCard>
+    <Styled.CustomLink to="/menu">
+      <Styled.RestaurantCard inMenu={inMenu} onClick={onClick}>
+        <Styled.RestaurantImage src={imgSource} />
+        <Styled.InfoWrapper>
+          <Styled.RestaurantName>{restaurantName}</Styled.RestaurantName>
+          <Styled.RestaurantTypeAndLocation>
+            {restaurantType}
+            <Styled.LocationIcon />
+          </Styled.RestaurantTypeAndLocation>
+          <Styled.RestaurantAddress>
+            Rua: {restaurantStreet}, {restaurantNum}
+            <br /> {restaurantNeighborhood}
+          </Styled.RestaurantAddress>
+        </Styled.InfoWrapper>
+      </Styled.RestaurantCard>
+    </Styled.CustomLink>
   );
 };
 

@@ -7,6 +7,7 @@ export const MenuItemCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 39px 25px 23px;
 `;
 
 export const MenuItemImg = styled.img`

@@ -4,8 +4,9 @@ import ReferenceBar from '../ReferenceBar';
 import SearchBar from '../SearchBar';
 import Cart from '../Cart';
 import * as Styled from './style';
+import RestaurantCard from '../RestaurantCard';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, home = false, menu = false }) => {
   return (
     <div
       style={{ minHeight: '100vh', maxHeight: '100vh', overflowX: 'hidden' }}
@@ -15,7 +16,8 @@ const Layout = ({ children }) => {
       <Styled.ContentWrapper>
         <Styled.Wrapper>
           {/* here comes the search bar or the restaurant card extended */}
-          <SearchBar />
+          {home ? <SearchBar /> : menu ? <RestaurantCard inMenu /> : ''}
+
           <Styled.Content>{children}</Styled.Content>
         </Styled.Wrapper>
         <Cart />

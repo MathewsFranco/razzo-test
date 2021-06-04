@@ -5,9 +5,8 @@ import RestaurantsList from '../../components/RestaurantsList';
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout home>
       <RestaurantsList />
-      <MenuList />
     </Layout>
   );
 };

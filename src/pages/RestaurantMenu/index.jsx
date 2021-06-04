@@ -1,13 +1,13 @@
 import React from 'react';
 import Layout from '../../components/Layout';
-import MenuList from '../../components/MenuList';
+import MenuList from '../../components/MenuItemsList';
 
-const Home = () => {
+const RestaurantMenu = () => {
   return (
-    <Layout>
+    <Layout menu>
       <MenuList />
     </Layout>
   );
 };
 
-export default Home;
+export default RestaurantMenu;
