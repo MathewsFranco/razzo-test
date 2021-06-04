@@ -1,7 +1,7 @@
 import restaurantsApi from '../../services/restaurantsApi';
 import menuApi from '../../services/menusApi';
 import { addRestaurants } from '../ducks/restaurants';
-import { addMenuItem } from '../ducks/menu';
+import { populateMenu } from '../ducks/menu';
 
 export const getAllRestaurants = () => {
   return (dispatch) => {
@@ -19,8 +19,8 @@ export const getRestaurantMenu = (restaurantId) => {
     menuApi
       .get(restaurantId)
       .then((res) => {
-        return dispatch(addMenuItem(res.data.data));
+        return dispatch(populateMenu(res.data.data));
       })
-      .catch(console.log());
+      .catch(console.log);
   };
 };
