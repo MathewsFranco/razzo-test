@@ -5,14 +5,10 @@ import RestaurantCard from '../RestaurantCard';
 
 const RestaurantsList = () => {
   const restaurants = useSelector((state) => state.restaurants);
-  console.log(`🚀 ~ restaurants`, restaurants);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getAllRestaurants());
   }, [dispatch]);
-
-  const menuItems = useSelector((state) => state.menuItems);
-  console.log(`🚀 ~ menuItems`, menuItems);
 
   function handleClick(restaurantId) {
     dispatch(getRestaurantMenu(restaurantId));
