@@ -65,6 +65,7 @@ export const CartItemPrice = styled.p`
 `;
 
 export const DeleteIcon = styled(FaTrashAlt)`
+  cursor: pointer;
   color: ${(props) => props.theme.colors.placeholder};
   margin-left: 14px;
 `;
