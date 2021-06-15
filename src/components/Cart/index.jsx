@@ -19,7 +19,7 @@ const Cart = () => {
             return (
               <CartItem
                 key={index}
-                img={item.imgs[0].url}
+                img={item.imgs[1].url}
                 name={item.name}
                 type={item.category}
                 price={item.pricing}
