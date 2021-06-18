@@ -2,10 +2,10 @@ import styled from 'styled-components';
 import { BiSearch } from 'react-icons/bi';
 
 export const Wrapper = styled.div`
-  width: 303px;
+  max-width: 303px;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   border-radius: 7px;
   border: 1px solid ${(props) => props.theme.colors.contornoCampo};
   margin-left: 23px;
@@ -23,7 +23,6 @@ export const SearchIcon = styled(BiSearch)`
 
 export const SearchBar = styled.input`
   height: 45px;
-  width: 100%;
   border: none;
   font-family: 'Gordita Regular';
   font-size: 13px;
