@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import * as Styled from './style';
 import logo from '../../img/razzo-logo.png';
 import userAvatar from '../../img/user-avatar.png';
@@ -8,8 +8,10 @@ import Link from '../Link';
 
 const NavBar = () => {
   const amountInCart = useSelector((state) => state.cart).length;
-  function toggleCart() {
+  const [showCart, setShowCart] = useState(true);
+  function toggleCartShowProp() {
     console.log('showCart or hideCart');
+    setShowCart((prevState) => !prevState);
   }
   return (
     <Styled.NavBar>
@@ -23,8 +25,9 @@ const NavBar = () => {
       </Styled.Wrapper>
       <Styled.Wrapper>
         <Styled.CartIcon
+          showCart={showCart}
           notification={amountInCart}
-          onClick={() => toggleCart()}
+          onClick={() => toggleCartShowProp()}
         >
           <IoBagOutline />
         </Styled.CartIcon>
